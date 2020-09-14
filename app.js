@@ -29,9 +29,8 @@ app.get("/dbms", function(req, res){
 })
 
 
-app.listen(3000, function(){
-	console.log("server started");
-	//console.log(process.env.PORT);
-	//console.log(process.env.IP);
-	
-})
+var port = process.env.PORT || 3000;
+var ip = process.env.IP;
+app.listen(port, ip, function () {
+  console.log("Connected to SK server");
+});
